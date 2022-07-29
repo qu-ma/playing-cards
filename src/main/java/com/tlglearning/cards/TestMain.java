@@ -25,7 +25,7 @@ public class TestMain {
     deck.sort();
     System.out.println(deck);
 
-    class RankFirstComparator implements Comparator<Card> {
+    deck.sort(new Comparator<Card>() {
 
       @Override
       public int compare(Card card1, Card card2) {
@@ -35,9 +35,7 @@ public class TestMain {
         }
         return comparison;
       }
-    }
-
-    deck.sort(new RankFirstComparator());
+    });
     System.out.println(deck);
   }
 }
